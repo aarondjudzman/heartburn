@@ -17,14 +17,14 @@ export default function FoodSearch() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen w-screen items-center">
-      <header className="sticky top-0 z-30 w-full flex h-14 items-center border-b border-b-slate-950 bg-background px-4">
+    <div className="flex flex-col min-h-screen w-screen items-center bg-peach-yellow-50">
+      <header className="sticky top-0 z-30 w-full flex h-14 bg-peach-yellow-50 items-center border-b-2 border-b-peach-yellow-800 px-4">
         <div className="relative w-full flex justify-center">
           <Input
             type="search"
             placeholder="Search food..."
             onChange={(e) => handleSearch(e.target.value)}
-            className="w-5/6 rounded-lg bg-background pl-2"
+            className="w-5/6 rounded-lg bg-transparent pl-2 border-2 border-peach-yellow-500 focus-visible:ring-peach-yellow-600"
           />
         </div>
       </header>
@@ -36,7 +36,10 @@ export default function FoodSearch() {
             </p>
           ) : (
             searchResults.map((item, index) => (
-              <Card key={index} className="mb-4">
+              <Card
+                key={index}
+                className="mb-4 border-2 border-peach-yellow-400 shadow-lg"
+              >
                 <CardHeader>
                   <div className="flex justify-between items-center">
                     <div className="w-5/6">

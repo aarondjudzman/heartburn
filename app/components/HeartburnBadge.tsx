@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
   faExclamationTriangle,
-  faExclamationCircle,
+  faBan,
 } from "@fortawesome/free-solid-svg-icons";
 
 const categoryColors = {
@@ -18,12 +18,12 @@ const categoryIcons = {
   [HeartburnCategory.MayCause]: (
     <FontAwesomeIcon icon={faExclamationTriangle} />
   ),
-  [HeartburnCategory.WillCause]: <FontAwesomeIcon icon={faExclamationCircle} />,
+  [HeartburnCategory.WillCause]: <FontAwesomeIcon icon={faBan} />,
 };
 
 export function HeartburnBadge({ category }: { category: HeartburnCategory }) {
   return (
-    <Badge className={`${categoryColors[category]} text-white`}>
+    <Badge className={`${categoryColors[category]} text-white text-xl p-2`}>
       {categoryIcons[category]}
     </Badge>
   );
