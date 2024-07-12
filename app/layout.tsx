@@ -4,10 +4,10 @@ import "./globals.css";
 
 const syne = Syne({ subsets: ["latin"] });
 
-const APP_NAME = "Heartburn Checker";
-const APP_DEFAULT_TITLE = "Heartburn Checker";
-const APP_TITLE_TEMPLATE = "%s - PWA App";
-const APP_DESCRIPTION = "Heartburn Checker";
+const APP_NAME = "Nibble";
+const APP_DEFAULT_TITLE = "Nibble";
+const APP_TITLE_TEMPLATE = "Nibble";
+const APP_DESCRIPTION = "Nibble";
 
 export const metadata: Metadata = {
   manifest: "/manifest.json",
