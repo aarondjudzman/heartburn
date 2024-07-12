@@ -1,15 +1,15 @@
-enum HeartburnCategory {
+export enum HeartburnCategory {
   DoesNotCause = "DOES NOT Cause Heartburn CAN EAT",
   MayCause = "MAY Cause Heartburn EAT A LITTLE",
   WillCause = "WILL Cause Heartburn AVOID IT",
 }
 
-interface FoodItem {
+export interface FoodItem {
   name: string;
   category: HeartburnCategory;
 }
 
-const foodItems: FoodItem[] = [
+export const FoodItems: FoodItem[] = [
   // DOES NOT Cause Heartburn CAN EAT
   { name: "Apple, fresh", category: HeartburnCategory.DoesNotCause },
   { name: "Apple, dried", category: HeartburnCategory.DoesNotCause },
