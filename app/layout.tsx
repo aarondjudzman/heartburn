@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Saira } from "next/font/google";
+import { Syne } from "next/font/google";
 import "./globals.css";
 
-const saira = Saira({ subsets: ["latin"] });
+const syne = Syne({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={saira.className}>{children}</body>
+      <body className={syne.className}>{children}</body>
     </html>
   );
 }

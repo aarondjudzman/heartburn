@@ -8,9 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const categoryColors = {
-  [HeartburnCategory.DoesNotCause]: "bg-green-500",
-  [HeartburnCategory.MayCause]: "bg-yellow-500",
-  [HeartburnCategory.WillCause]: "bg-red-500",
+  [HeartburnCategory.DoesNotCause]: "bg-green-400",
+  [HeartburnCategory.MayCause]: "bg-yellow-400",
+  [HeartburnCategory.WillCause]: "bg-red-400",
 };
 
 const categoryIcons = {
