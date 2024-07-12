@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { searchFood } from "@/app/func/search";
 import { FoodItem } from "@/app/data/food";
 import { HeartburnBadge } from "@/app/components/HeartburnBadge";
@@ -17,19 +17,21 @@ export default function FoodSearch() {
   };
 
   return (
-    <div className="flex flex-col h-full w-screen items-center">
-      <div className="p-4 bg-white w-5/6">
-        <Input
-          type="text"
-          placeholder="Search food..."
-          onChange={(e) => handleSearch(e.target.value)}
-          className="w-full"
-        />
-      </div>
-      <div className="flex-grow overflow-hidden w-5/6 rounded">
+    <div className="flex flex-col min-h-screen w-screen items-center">
+      <header className="sticky top-0 z-30 w-full flex h-14 items-center border-b border-b-slate-950 bg-background px-4">
+        <div className="relative w-full flex justify-center">
+          <Input
+            type="search"
+            placeholder="Search food..."
+            onChange={(e) => handleSearch(e.target.value)}
+            className="w-5/6 rounded-lg bg-background pl-2"
+          />
+        </div>
+      </header>
+      <main className="flex-grow overflow-hidden w-5/6 rounded">
         <ScrollArea className="h-full p-4">
           {searchResults.length === 0 ? (
-            <p className="text-gray-500 text-center mt-8">
+            <p className="text-gray-500 text-center mt-72">
               Search for food items to see results
             </p>
           ) : (
@@ -49,7 +51,7 @@ export default function FoodSearch() {
             ))
           )}
         </ScrollArea>
-      </div>
+      </main>
     </div>
   );
 }
